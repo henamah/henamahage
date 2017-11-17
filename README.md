@@ -12,3 +12,4 @@ tests
 7. Blue ci
 8. Werku i
 9. Tubi ci
+10. Kurec ci
