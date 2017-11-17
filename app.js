@@ -2,7 +2,6 @@ const server = require('express');
 const md5 = require('md5')
 const client = require('./models/client')
 
-
 class Server {
 
   constructor(user, music, films, player) {
